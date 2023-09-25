@@ -8,4 +8,4 @@ app includes a button that both writes to the console (right click and <inspect>
 
 Once compiled and published, this app can also be used offline as a PWA.
 
-Copyright (c) nigel Booth 2023.
+Copyright (c) Nigel Booth 2023.
