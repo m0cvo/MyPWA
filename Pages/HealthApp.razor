@@ -4,6 +4,7 @@
 <div class="card" style="width:22rem">
     <div class="card-body">
         <h3 class="card-title">BMI Calculator</h3>
+        <p>Date @date</p>
     
 <p>
     <label>
@@ -23,6 +24,7 @@
     private Int32 height { get; set; }
     private float mass { get; set; }
     float bmi;
+    DateTime date = DateTime.Now;
 
     /// <summary>
     /// Constructor which takes in the mass in Kg and height in cm
