@@ -7,14 +7,14 @@
     
 <p>
     <label>
-        Please enter your height in cm: <input @bind="height" />
+        Please enter your height in cm: <input @bind="height" /> @*Displays the label and an input box on the screen binding the user input to Int32 height*@
     </label>
     <label>
-        Please enter your mass in kg: <input @bind="mass" />
+                Please enter your mass in kg: <input @bind="mass" /> @*Displays the label and an input box on the screen binding the user input to float mass*@
     </label>
-    <button class="btn-primary" @onclick="BMICalc">Enter</button>
+    <button class="btn-primary" @onclick="BMICalc">Enter</button> @*Displays a button on the screen which calls the method BMICalc in the C# code*@
 </p>
-<p role="status">That gives you a BMI of: @bmi</p>
+<p role="status">That gives you a BMI of: @bmi</p> @*Displays the value of the calculated BMI*@
     </div>
 </div>
 
@@ -23,6 +23,13 @@
     private Int32 height { get; set; }
     private float mass { get; set; }
     float bmi;
+
+    /// <summary>
+    /// Constructor which takes in the mass in Kg and height in cm
+    /// to enable the BMI to be calculated later
+    /// </summary>
+    /// <param name="mass"></param>
+    /// <param name="height"></param>
 
     private void BMICalc()
     {
