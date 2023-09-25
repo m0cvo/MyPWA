@@ -1,0 +1,42 @@
+﻿@using System.IO
+@using System.Globalization
+
+<div class="card" style="width:22rem">
+    <div class="card-body">
+        <h3 class="card-title">BMI Calculator</h3>
+    
+<p>
+    <label>
+        Please enter your height in cm: <input @bind="height" />
+    </label>
+    <label>
+        Please enter your mass in kg: <input @bind="mass" />
+    </label>
+    <button class="btn-primary" @onclick="BMICalc">Enter</button>
+</p>
+<p role="status">That gives you a BMI of: @bmi</p>
+    </div>
+</div>
+
+
+@code {
+    private Int32 height { get; set; }
+    private float mass { get; set; }
+    float bmi;
+
+    private void BMICalc()
+    {
+        if (height != 0 && mass != 0)
+        {
+            float heightInM = height / 100.0f;
+            //bmi is the mass in kg divided by the heightInM squared
+            //Math.Pow returns the first argument raised to the power of the second argument
+            //as a double so we have to cast it as a float
+            bmi = mass / (float)Math.Pow(heightInM, 2);
+        }
+        else
+        {
+            bmi = -1; //default value to let us know BMI is unfindable.
+        }
+    }
+}
