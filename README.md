@@ -6,6 +6,8 @@ As well as the standard Blazor package that VS creates for you with Counter, Fet
 which can be accessed via the Nav Menu on the Index Page.  This page then accesses two further components - Dialog.razor and HealthApp.razor.  The Dialog 
 app includes a button that both writes to the console (right click and <inspect>) and appends a message to the screen.  The HealthApp is a BMI Calculator.
 
+This is a work in progress and so, therefore, there may be regular updates.
+
 Once compiled and published, this app can also be used offline as a PWA.
 
 Copyright (c) Nigel Booth 2023.
